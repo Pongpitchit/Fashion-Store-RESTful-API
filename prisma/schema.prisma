@@ -1,0 +1,66 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       Int      @id @default(autoincrement())
+  username String
+  email    String   @unique
+  password String
+
+  reviews  Review[]
+  orders   Order[]
+}
+
+model Product {
+  id        Int         @id @default(autoincrement())
+  name      String
+  category  String
+  price     Int
+
+  reviews     Review[]
+  orderItems  OrderItem[]
+}
+
+model Review {
+  id         Int      @id @default(autoincrement())
+  rating     Int
+  comment    String
+
+  // เชื่อมกับ User
+  userId     Int
+  user       User     @relation(fields: [userId], references: [id])
+
+  // เชื่อมกับ Product
+  productId  Int
+  product    Product  @relation(fields: [productId], references: [id])
+}
+
+model Order {
+  id      Int      @id @default(autoincrement())
+  date    DateTime @default(now())
+
+  // เชื่อมกับ User
+  userId  Int
+  user    User     @relation(fields: [userId], references: [id])
+
+  items   OrderItem[]
+}
+
+model OrderItem {
+  id        Int      @id @default(autoincrement())
+  quantity  Int
+
+  // เชื่อมกับ Order
+  orderId   Int
+  order     Order    @relation(fields: [orderId], references: [id])
+
+  // เชื่อมกับ Product
+  productId Int
+  product   Product  @relation(fields: [productId], references: [id])
+}
