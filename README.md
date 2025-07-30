@@ -4,7 +4,10 @@
 ประกอบด้วย Users, Products, Orders และ Nested Resources: Product Reviews, Order Items
 
 ---
+## PostMan 
 
+https://www.postman.com/scottxsh/workspace/api-shares/collection/46027124-fd85a57a-595e-4986-8c64-af603a742249?action=share&creator=46027124
+---
 ## 🚀 วิธีใช้งาน
 
 1. เปิด XAMPP และลบโฟลเดอร์ `prisma/migrations` หากมีอยู่เดิม
