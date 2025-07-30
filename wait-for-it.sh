@@ -11,6 +11,3 @@ done
 
 exec $cmd
 
-
-git config --global user.name "Besttpopxlarr"
-git config --global user.email "Pongpitchitza@gmail.com"
