@@ -4,9 +4,23 @@
 ประกอบด้วย Users, Products, Orders และ Nested Resources: Product Reviews, Order Items
 
 ---
-## PostMan 
+# 🧪 Postman Collection: API Shares
 
-https://www.postman.com/scottxsh/workspace/api-shares/collection/46027124-fd85a57a-595e-4986-8c64-af603a742249?action=share&creator=46027124
+ใช้สำหรับทดสอบ RESTful API ที่พัฒนาโดย Scottxsh  
+สามารถนำเข้าไปใน Postman เพื่อทดลองเรียกใช้งาน endpoint ต่าง ๆ ได้ทันที
+
+## 🔗 ลิงก์สำหรับเปิดใช้งาน
+
+👉 [เปิดใน Postman](https://www.postman.com/scottxsh/workspace/api-shares/collection/46027124-fd85a57a-595e-4986-8c64-af603a742249?action=share&creator=46027124)
+
+## 📦 เนื้อหาใน Collection
+
+- Authentication
+- Users
+- Products
+- Orders
+- Product Reviews
+- Order Items
 ---
 ## 🚀 วิธีใช้งาน
 
